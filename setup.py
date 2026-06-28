@@ -19,6 +19,10 @@ setup(
     license="Apache-2.0",
     python_requires=">=3.10",
     packages=find_packages(),
+    include_package_data=True,
+    package_data={
+        "cumm": ["csrc_hip/*.cpp", "csrc_hip/*.hip", "csrc_hip/*.h"],
+    },
     install_requires=[
         "torch",
         "numpy",
